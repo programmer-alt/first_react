@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Test from './Test'
+import Test2 from './Test2'
+import Header from './Header/Header'
+
+const headerData = {
+  site_name: 'my test site name'
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-           <code></code> 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          learn react
-        </a>
-      </header>
-    </div>
+  <>
+  <Header data={headerData} ></Header>
+<Test></Test>
+<Test2></Test2>
+  </>
   );
 }
 
