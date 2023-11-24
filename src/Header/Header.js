@@ -3,18 +3,18 @@ function Header (props) {
         <header>
             <h1>{props.data.site_name}</h1>
             <h2>{props.second_header}</h2>
-            <Nav></Nav>
+            <Nav nav={props.data.nav}></Nav>
         </header>
     )
 }
 
-function Nav () {
+function Nav (props) {
+    let data = props.nav;
+    const listItem = data.map(item=> <li><a href={item.link}>{item.text}</a></li> )
     return (
         <nav>
             <ul>
-                <li>one</li>
-                <li>two</li>
-                <li>three</li>
+                {listItem}
             </ul>
         </nav>
     )
