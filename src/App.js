@@ -3,13 +3,16 @@ import './App.css';
 // import Test from './Test';
 // import Test2 from './Test2';
 import Header from './Header/Header';
-import About from './Routing/about';
+import About from './Routing/About';
 import Users from './Routing/Users';
+import Main from './Routing/Main';
 // import Goods1 from './Goods1';
 // import Mainsection from './Bod/Mainsection';
-import Notes from './notes/notes'
-import './Css/Style.css';
-
+// import Notes from './notes/notes'
+// import './Css/Style.css';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import UserId from './Routing/UserId';
+import Error from './Routing/Error';
 
 
 const headerData = {
@@ -40,12 +43,18 @@ function App() {
 {goods.map(item=><Goods1 title={item.title} cost={item.cost} image={item.image} />)} */}
 
 {/* {names.map(item=><Mainsection names={item.name} hair={item.hair} proffession={item.proffession}></Mainsection>)} */}
-  <Header></Header>
+<Header/>
   <Router>
-    <Swith>
+ 
+    <Routes>
+      <Route path="/Routing/Main" element={<Main />} />
+      <Route path="/Routing/About" element={<About />} />
+      <Route path="/Routing/Users" element={<Users/>} />
+      <Route path="/Routing/Users/:userName" element={<UserId/>} />
+      <Route element={<Error/>} />
+      </Routes>
       
-    </Swith>
-  </Router>
+      </Router>
   </>
   );
 }

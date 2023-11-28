@@ -8,6 +8,7 @@
 //     )
 // }
 
+
 // function Nav (props) {
 //     let data = props.nav;
 //     const listItem = data.map(item=> <li key={item.link}><a href={item.link}>{item.text}</a></li> )
@@ -19,13 +20,17 @@
 //         </nav>
 //     )
 // }
-function Header () {
-   return ( <nav>
-        <li> <a href="/">Main</a></li>
-        <li> <a href="/About">About</a></li>
-        <li> <a href="/Users">Users</a></li>
-    </nav>
-   )
+
+function Header() {
+    return (
+        <>
+            <nav>
+            <li> <a href="/Routing/Main">Main</a></li>
+         <li> <a href="/Routing/About">About</a></li>
+         <li> <a href="/Routing/Users">Users</a></li>
+            </nav>
+        </>
+    )
 }
 
 export default Header;
