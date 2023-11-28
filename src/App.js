@@ -1,9 +1,16 @@
 
 import './App.css';
-import Test from './Test';
-import Test2 from './Test2';
+// import Test from './Test';
+// import Test2 from './Test2';
 import Header from './Header/Header';
-import Goods1 from './Goods1';
+import About from './Routing/about';
+import Users from './Routing/Users';
+// import Goods1 from './Goods1';
+// import Mainsection from './Bod/Mainsection';
+import Notes from './notes/notes'
+import './Css/Style.css';
+
+
 
 const headerData = {
   site_name: 'my test site name',
@@ -19,13 +26,26 @@ const goods = [
   {"title":"pear", "cost":550, "image":"https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_pera-512.png"},
 ]
 
+const names = [
+  {"name": "Вася", "hair":"blond", "proffession":"model"},
+  {"name": "Катя", "hair":"brown - haired", "proffession":"designer"},
+]
+
 function App() {
   return (
   <>
-  <Header data={headerData} ></Header>
+  {/* <Header data={headerData} ></Header>
 <Test></Test>
 <Test2></Test2>
-{goods.map(item=><Goods1 title={item.title} cost={item.cost} image={item.image} />)}
+{goods.map(item=><Goods1 title={item.title} cost={item.cost} image={item.image} />)} */}
+
+{/* {names.map(item=><Mainsection names={item.name} hair={item.hair} proffession={item.proffession}></Mainsection>)} */}
+  <Header></Header>
+  <Router>
+    <Swith>
+      
+    </Swith>
+  </Router>
   </>
   );
 }
