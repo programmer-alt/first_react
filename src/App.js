@@ -10,7 +10,7 @@ import Main from './Routing/Main';
 // import Mainsection from './Bod/Mainsection';
 // import Notes from './notes/notes'
 // import './Css/Style.css';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom'
 import UserId from './Routing/UserId';
 import Error from './Routing/Error';
 
@@ -43,9 +43,15 @@ function App() {
 {goods.map(item=><Goods1 title={item.title} cost={item.cost} image={item.image} />)} */}
 
 {/* {names.map(item=><Mainsection names={item.name} hair={item.hair} proffession={item.proffession}></Mainsection>)} */}
-<Header/>
+
   <Router>
- 
+ <nav>
+  
+   <li> <NavLink to="/Routing/Main">Main</NavLink></li>
+   <li> <NavLink to="/Routing/About">About</NavLink></li>
+   <li>  <NavLink to="/Routing/Users">Users</NavLink> </li>
+  
+ </nav>
     <Routes>
       <Route path="/Routing/Main" element={<Main />} />
       <Route path="/Routing/About" element={<About />} />
