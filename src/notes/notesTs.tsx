@@ -5,7 +5,7 @@ const NoteTs: React.FC = (): JSX.Element => {
   interface Note {
     title: string,
     isComplete: boolean,
-    id: string
+    id: typeof uuidv4
   }
   const inputRef: MutableRefObject<HTMLInputElement | null> = useRef(null)
   const [notes, setNotes] = useState<Note[]>([]);
@@ -27,7 +27,7 @@ const NoteTs: React.FC = (): JSX.Element => {
       inputRef.current?.focus()
     }
   }
-  const onDelete = (id: string) {
+  const onDelete = (id: string) => {
     const filteredNotes = notes.filter((note) => note.id !== id)
     setNotes(filteredNotes)
   }
