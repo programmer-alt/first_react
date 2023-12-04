@@ -21,16 +21,3 @@
 //     )
 // }
 
-function Header() {
-    return (
-        <>
-            <nav>
-            <li> <a href="/Routing/Main">Main</a></li>
-         <li> <a href="/Routing/About">About</a></li>
-         <li> <a href="/Routing/Users">Users</a></li>
-            </nav>
-        </>
-    )
-}
-
-export default Header;

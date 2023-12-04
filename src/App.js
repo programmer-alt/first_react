@@ -2,39 +2,54 @@
 import './App.css';
 // import Test from './Test';
 // import Test2 from './Test2';
-import Header from './Header/Header';
-import About from './Routing/About';
-import Users from './Routing/Users';
-import Main from './Routing/Main';
-// import Goods1 from './Goods1';
-// import Mainsection from './Bod/Mainsection';
-// import Notes from './notes/notes'
-// import './Css/Style.css';
-import {BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom'
-import UserId from './Routing/UserId';
-import Error from './Routing/Error';
+// import Header from './Header/Header';
+// import About from './Routing/About';
+// import Users from './Routing/Users';
+// import Main from './Routing/Main';
+// // import Goods1 from './Goods1';
+// // import Mainsection from './Bod/Mainsection';
+// // import Notes from './notes/notes'
+// // import './Css/Style.css';
+// import {BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom'
+// import UserId from './Routing/UserId';
+// import Error from './Routing/Error';
+import React from 'react'
+import NotesTs from './notes/notesTs.tsx';
 
 
-const headerData = {
-  site_name: 'my test site name',
-  nav: [
-    {"link":"nav1", "text":"my link"},
-    {"link":"nav2", "text":"my link2"},
-    {"link":"nav3", "text":"my link3"},
-  ]
-}
+// const headerData = {
+//   site_name: 'my test site name',
+//   nav: [
+//     {"link":"nav1", "text":"my link"},
+//     {"link":"nav2", "text":"my link2"},
+//     {"link":"nav3", "text":"my link3"},
+//   ]
+// }
 
-const goods = [
-  {"title":"apple", "cost":330, "image":"https://cdn3.iconfinder.com/data/icons/education-209/64/apple-fruit-science-school-512.png"},
-  {"title":"pear", "cost":550, "image":"https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_pera-512.png"},
-]
+// const goods = [
+//   {"title":"apple", "cost":330, "image":"https://cdn3.iconfinder.com/data/icons/education-209/64/apple-fruit-science-school-512.png"},
+//   {"title":"pear", "cost":550, "image":"https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_pera-512.png"},
+// ]
 
-const names = [
-  {"name": "Вася", "hair":"blond", "proffession":"model"},
-  {"name": "Катя", "hair":"brown - haired", "proffession":"designer"},
-]
+// const names = [
+//   {"name": "Вася", "hair":"blond", "proffession":"model"},
+//   {"name": "Катя", "hair":"brown - haired", "proffession":"designer"},
+// ]
 
 function App() {
+  let textInput = React.createRef();
+  let textOut = React.createRef();
+  
+  function f1 (arg) {
+    let a =' 5';
+    
+    console.log('f1 work '+ arg)
+  }
+
+  function showInput (event) {
+    console.log(textInput.current.value)
+    console.log(event.target.value)
+  }
   return (
   <>
   {/* <Header data={headerData} ></Header>
@@ -44,7 +59,7 @@ function App() {
 
 {/* {names.map(item=><Mainsection names={item.name} hair={item.hair} proffession={item.proffession}></Mainsection>)} */}
 
-  <Router>
+  {/* <Router>
  <nav>
   
    <li> <NavLink to="/Routing/Main">Main</NavLink></li>
@@ -59,8 +74,20 @@ function App() {
       <Route path="/Routing/Users/:userName" element={<UserId/>} />
       <Route element={<Error/>} />
       </Routes>
-      
-      </Router>
+      //  */}
+      {/* // </Router> */}
+     
+       {/* <h1>Событие</h1>
+      <section>
+        <h2>Button</h2>
+        <button onClick={()=>f1('1')}>Push</button>
+      </section>
+      <section>
+        <input type="text" onInput={showInput} ref={textInput} />
+        <p ref={textOut}></p>
+      </section>  */}
+   
+    <NotesTs></NotesTs>
   </>
   );
 }
