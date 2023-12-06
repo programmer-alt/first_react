@@ -5,7 +5,7 @@ const NoteTs: React.FC = (): JSX.Element => {
   interface Note {
     title: string,
     isComplete: boolean,
-    id: typeof uuidv4
+    id: string
   }
   const inputRef: MutableRefObject<HTMLInputElement | null> = useRef(null)
   const [notes, setNotes] = useState<Note[]>([]);
